@@ -3,10 +3,19 @@
 #include "question3.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
-}
+    // Test Case 1: 00001010 -> 10
+    SECTION("Test Case 1: 00001010") {
+        REQUIRE(binary_to_decimal("00001010") == 10);
+    }
 
-TEST_CASE("test")
-{
-	REQUIRE(test_config() == true);
+    // Test Case 2: 10101010 -> 170
+    SECTION("Test Case 2: 10101010") {
+        REQUIRE(binary_to_decimal("10101010") == 170);
+    }
+
+    // Test Case 3: 11111111 -> 255
+    SECTION("Test Case 3: 11111111") {
+        REQUIRE(binary_to_decimal("11111111") == 255);
 }
+	}
+
